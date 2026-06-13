@@ -8,6 +8,8 @@
 
 # MediDesk
 
+**Live Demo:** [https://medidesk-xi.vercel.app/](https://medidesk-xi.vercel.app/)
+
 MediDesk is a multimodal Generative AI application that helps users read
 medicine packaging and organize handwritten prescriptions from uploaded
 images.
