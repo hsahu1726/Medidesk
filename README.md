@@ -1,3 +1,11 @@
+<p align="center">
+  <img
+    src="public/images/whatsapp-20image-202025-11-17-20at-2018.jpg"
+    alt="MediDesk logo"
+    width="140"
+  />
+</p>
+
 # MediDesk
 
 MediDesk is a multimodal Generative AI application that helps users read
