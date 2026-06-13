@@ -1,6 +1,7 @@
 'use client';
 
 import { Mail, Phone, Twitter } from 'lucide-react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 export default function Contact() {
@@ -29,7 +30,7 @@ export default function Contact() {
         </h2>
         
         <p className={`text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'animate-float' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? '0.2s' : '0s' }}>
-          Have questions? We'd love to hear from you. Reach out to our team.
+          Have questions? We&apos;d love to hear from you. Reach out to our team.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -81,9 +82,11 @@ export default function Contact() {
           {/* Founders */}
           <div className={`bg-background rounded-xl p-8 border border-border ${isVisible ? 'animate-float' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? '0.3s' : '0s' }}>
             <h3 className="text-2xl font-bold mb-8 text-foreground flex items-center gap-3">
-              <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-11-17%20at%2018.39.16_c5907857-CCFQfiudNqNMwOWOgqNtHa8YFw38IK.jpg"
+              <Image
+                src="/images/whatsapp-20image-202025-11-17-20at-2018.jpg"
                 alt="MediDesk Logo"
+                width={40}
+                height={40}
                 className="w-10 h-10 object-contain rounded"
               />
               Meet Our Team
@@ -98,18 +101,21 @@ export default function Contact() {
             </div>
             <div className="mt-8 pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-4">
-                We're passionate about making medicine management simple and accessible for everyone.
+                We&apos;re passionate about making medicine management simple and accessible for everyone.
               </p>
-              <button className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 animate-menu-item">
+              <a
+                href="mailto:shouryapratap6081@gmail.com?subject=MediDesk%20demo%20request"
+                className="block w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg text-center font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 animate-menu-item"
+              >
                 Schedule a Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Important Disclaimer */}
-        <div className={`bg-destructive/10 border border-destructive/30 rounded-xl p-6 transition-all duration-1000 ${isVisible ? 'animate-float' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? '0.5s' : '0s' }}>
-          <p className="text-sm text-foreground font-semibold mb-2">⚠️ Important Disclaimer</p>
+        <div id="disclaimer" className={`bg-destructive/10 border border-destructive/30 rounded-xl p-6 transition-all duration-1000 ${isVisible ? 'animate-float' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? '0.5s' : '0s' }}>
+          <p className="text-sm text-foreground font-semibold mb-2">Important Disclaimer</p>
           <p className="text-muted-foreground text-sm">
             MediDesk provides informational assistance only and is not a substitute for professional medical advice. Always consult your doctor or healthcare provider for medical guidance. This is not a prescription service.
           </p>

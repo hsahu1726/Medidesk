@@ -1,9 +1,13 @@
+import Image from "next/image";
+
 export default function MediDeskLogo() {
   return (
     <div className="flex items-center gap-3">
-      <img 
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-11-17%20at%2018.39.16_c5907857-CCFQfiudNqNMwOWOgqNtHa8YFw38IK.jpg"
+      <Image
+        src="/images/whatsapp-20image-202025-11-17-20at-2018.jpg"
         alt="MediDesk Logo"
+        width={48}
+        height={48}
         className="w-12 h-12 object-contain rounded-lg"
       />
 

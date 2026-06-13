@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
   Upload,
   Pill,
@@ -49,6 +49,12 @@ type PrescriptionResult = {
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    queueMicrotask(() => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    });
+  }, []);
 
   // MediSnap state
   const [file, setFile] = useState<File | null>(null);
@@ -208,7 +214,7 @@ export default function Home() {
                   <Input
                     id="medisnap-file"
                     type="file"
-                    accept="image/*"
+                    accept="image/jpeg,image/png,image/webp"
                     onChange={(event) => {
                       const selectedFile = event.target.files?.[0] ?? null;
                       setFile(selectedFile);
@@ -216,6 +222,9 @@ export default function Home() {
                       setError(null);
                     }}
                   />
+                  <p className="text-xs text-muted-foreground">
+                    JPEG, PNG, or WebP. Maximum 5 MB.
+                  </p>
                 </div>
                 <Button
                   type="submit"
@@ -399,7 +408,7 @@ export default function Home() {
                   <Input
                     id="prescription-file"
                     type="file"
-                    accept="image/*"
+                    accept="image/jpeg,image/png,image/webp"
                     onChange={(event) => {
                       const selectedFile = event.target.files?.[0] ?? null;
                       setRxFile(selectedFile);
@@ -407,6 +416,9 @@ export default function Home() {
                       setRxError(null);
                     }}
                   />
+                  <p className="text-xs text-muted-foreground">
+                    JPEG, PNG, or WebP. Maximum 5 MB.
+                  </p>
                 </div>
                 <Button
                   type="submit"

@@ -108,7 +108,7 @@ export default function FeatureCards() {
             <div>
               <h4 className="text-xl font-bold text-foreground mb-2">Google Calendar Integration</h4>
               <p className="text-muted-foreground">
-                Next to each medicine in your schedule, click the "Add reminder to Google Calendar" button. Your medicine reminders will appear directly in your Google Calendar with pre-filled details.
+                Open a pre-filled medicine reminder in Google Calendar, then choose the time and repeat schedule that match your doctor&apos;s instructions.
               </p>
             </div>
           </div>
