@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Phone, Twitter } from 'lucide-react';
+import { Linkedin, Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
@@ -9,16 +9,8 @@ export default function Contact() {
   
   const founders = [
     {
-      name: 'Devansh Jain',
-      role: 'Co-founder'
-    },
-    {
-      name: 'Shourya Pratap Singh Chouhan',
-      role: 'Co-founder'
-    },
-    {
-      name: 'Yash Mittal',
-      role: 'Co-founder'
+      name: 'Harsh Sahu',
+      role: 'Founder'
     }
   ];
 
@@ -43,8 +35,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <a href="tel:+917878419251" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
-                    +91 78784 19251
+                  <a href="tel:+919835115250" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                    +91 98351 15250
                   </a>
                 </div>
               </div>
@@ -57,8 +49,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:shouryapratap6081@gmail.com" className="text-lg font-semibold text-foreground hover:text-accent transition-colors">
-                    shouryapratap6081@gmail.com
+                  <a href="mailto:hsahu1726@gmail.com" className="text-lg font-semibold text-foreground hover:text-accent transition-colors">
+                    hsahu1726@gmail.com
                   </a>
                 </div>
               </div>
@@ -67,12 +59,12 @@ export default function Contact() {
             <div className={`bg-background rounded-xl p-8 border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 hover:translate-y-[-4px] animate-menu-item ${isVisible ? 'animate-float' : 'opacity-0 translate-y-8'}`} style={{ animationDelay: isVisible ? '0.2s' : '0s' }}>
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                  <Twitter className="w-6 h-6 text-secondary" />
+                  <Linkedin className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Twitter</p>
-                  <a href="https://twitter.com/iamyashmittal" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-foreground hover:text-secondary transition-colors">
-                    @iamyashmittal
+                  <p className="text-sm text-muted-foreground">LinkedIn</p>
+                  <a href="https://www.linkedin.com/in/harsh-sahu-b94359335/" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-foreground hover:text-secondary transition-colors">
+                    Harsh Sahu
                   </a>
                 </div>
               </div>
@@ -104,7 +96,7 @@ export default function Contact() {
                 We&apos;re passionate about making medicine management simple and accessible for everyone.
               </p>
               <a
-                href="mailto:shouryapratap6081@gmail.com?subject=MediDesk%20demo%20request"
+                href="mailto:hsahu1726@gmail.com?subject=MediDesk%20demo%20request"
                 className="block w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg text-center font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 animate-menu-item"
               >
                 Schedule a Demo
